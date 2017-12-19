@@ -10,6 +10,7 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/main.css" rel='stylesheet'> 
+  <link href="<%= CONSTANTS[:STATIC_URL] + @css%>" rel='stylesheet'> 
   <title>Sinatra Template</title> 
 </head> 
 <body> 
@@ -18,5 +19,6 @@
     <%= yield %>
   </div>
   <h2>Footer</h2>
+  <script type="text/javascript" src="<%= CONSTANTS[:STATIC_URL] + @js%>"></script>
 </body> 
 </html> 

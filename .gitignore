@@ -9,3 +9,7 @@ vendor/gems/*
 .sass-cache/*
 .*.sw*
 Gemfile.lock
+public/bower_components
+package-lock.json
+node_modules
+public/dist
