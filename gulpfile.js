@@ -283,10 +283,9 @@ gulp.task('maestros', function(){
 gulp.task('vue', function(){
     gulp.start('fonts', 'layout-css', 'layout-js', 'swp-plugins');
     gulp.src([
+        DESTINO + 'libs.min.js',  
         MEDIA + 'bower_components/vue/dist/vue.min.js',
         MEDIA + 'bower_components/vue-router/dist/vue-router.min.js',
-        MEDIA + 'bower_components/jquery/dist/jquery.min.js',
-        MEDIA + 'bower_components/handlebars/handlebars.min.js',
         MEDIA + 'js/index.js'
     ])
     //.pipe(uglify())

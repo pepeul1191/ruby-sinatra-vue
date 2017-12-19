@@ -9,13 +9,32 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/main.css" rel='stylesheet'> 
   <link href="<%= CONSTANTS[:STATIC_URL] + @css%>" rel='stylesheet'> 
+  <link href="css/main.css" rel='stylesheet'> 
   <title>Sinatra Template</title> 
 </head> 
 <body> 
-  <h1>Header</h1>
-  <div id='container'>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Brand</a>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
     <%= yield %>
   </div>
   <h2>Footer</h2>
