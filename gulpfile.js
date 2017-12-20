@@ -282,10 +282,40 @@ gulp.task('maestros', function(){
 
 gulp.task('vue', function(){
     gulp.start('fonts', 'layout-css', 'layout-js', 'swp-plugins');
+
+    gulp.src([
+        DESTINO + 'swp.css',
+        MEDIA + 'css/main.css',
+    ])
+    .pipe(plumber())
+    .pipe(concatCss('accesos.min.css'))
+    .pipe(gulp.dest(DESTINO));
+
     gulp.src([
         DESTINO + 'libs.min.js',  
+        DESTINO + 'swp.js',
+        MEDIA + 'layouts/app.js',  
         MEDIA + 'bower_components/vue/dist/vue.min.js',
         MEDIA + 'bower_components/vue-router/dist/vue-router.min.js',
+        MEDIA + 'models/accesos/usuario.js', 
+        MEDIA + 'views/accesos/_table_usuario.js', 
+        MEDIA + 'views/accesos/_table_sistema.js', 
+        MEDIA + 'views/accesos/_table_menu.js', 
+        MEDIA + 'views/accesos/_table_rol.js', 
+        MEDIA + 'views/accesos/_table_permiso.js', 
+        MEDIA + 'views/accesos/_table_usuario_sistema.js', 
+        MEDIA + 'views/accesos/_table_log.js', 
+        //MEDIA + 'views/accesos/sistema.js',
+        //MEDIA + 'views/accesos/menu.js', 
+        //MEDIA + 'views/accesos/rol.js', 
+        //MEDIA + 'views/accesos/permiso.js', 
+        //MEDIA + 'views/accesos/usuario.js', 
+        //MEDIA + 'views/accesos/log.js', 
+        //MEDIA + 'views/accesos/usuario_sistema.js', 
+        //MEDIA + 'views/accesos/usuario_detalle.js', 
+        //MEDIA + 'views/accesos/usuario_rol_permiso.js', 
+        //MEDIA + 'views/accesos/_form_usuario.js', 
+        MEDIA + 'routes/accesos.js', 
         MEDIA + 'js/index.js'
     ])
     //.pipe(uglify())

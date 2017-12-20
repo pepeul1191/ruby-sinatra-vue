@@ -1,3 +1,4 @@
+/*
 var app = new Vue({
   el: '#app',
   data: {
@@ -92,3 +93,4 @@ const app8 = new Vue({
 }).$mount('#app-8')
 
 // Now the app has started!
+*/
